@@ -7,28 +7,11 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author paulo
  */
-public class Driver {
-
-    private Laser laser;
-    private Jato jato;
+public interface Driver {
     
-    public Laser getLaser() {
-        return laser;
-    }
-
-    public void setLaser(Laser laser) {
-        this.laser = laser;
-    }
-
-    public Jato getJato() {
-        return jato;
-    }
-
-    public void setJato(Jato jato) {
-        this.jato = jato;
-    }
-    
+    public Laser criarLaser();
+    public Jato criarJato();
     
 }

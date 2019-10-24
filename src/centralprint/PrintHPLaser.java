@@ -9,7 +9,7 @@ package centralprint;
  *
  * @author Aluno
  */
-public class PrintHPLaser extends Laser{
+public class PrintHPLaser  implements Laser{
     
     private String texto;
     
@@ -19,5 +19,17 @@ public class PrintHPLaser extends Laser{
 
     public void setTexto(String texto) {
         this.texto = texto;
+    }
+
+    @Override
+    public String impressaoLaserHP() {
+        this.texto ="Impressão sendo realizada por ImpressoraEpson Jato";
+        return this.texto;
+    }
+
+    @Override
+    public String impressaoLaserEpson() {
+        this.texto ="Impressora não encontrada";
+        return this.texto;
     }
 }

@@ -7,8 +7,9 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author paulo
  */
-public class Laser {
-    
+public interface Laser {
+    public String impressaoLaserHP();
+    public String impressaoLaserEpson();
 }

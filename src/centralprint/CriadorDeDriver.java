@@ -7,7 +7,7 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author Paulo André
  */
 public class CriadorDeDriver {
     

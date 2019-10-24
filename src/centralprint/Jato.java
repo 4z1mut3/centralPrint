@@ -7,8 +7,9 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author paulo
  */
-public class Jato {
-    
+public interface Jato {
+    public String impressaoHpJato();
+    public String impressaoPrintEpsonJato();
 }

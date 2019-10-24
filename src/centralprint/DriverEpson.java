@@ -7,23 +7,21 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author Paulo André
  */
-public class DriverEpson extends Driver{
+public class DriverEpson implements Driver{
 
-    private PrintEpsonLaser epsonLaser;
-    private PrintEpsonJato epsonJato;
+     
 
-    public PrintEpsonLaser getEpsonLaser() {
-        return epsonLaser;
+    @Override
+    public Laser criarLaser() {
+        PrintEpsonLaser impressaoEpsonLaser = new PrintEpsonLaser();
+        return impressaoEpsonLaser;
     }
-    public void setEpsonLaser(PrintEpsonLaser epsonLaser) {
-        this.epsonLaser = epsonLaser;
-    }                
-    public PrintEpsonJato getEpsonJato() {
-        return epsonJato;
+
+    @Override
+    public Jato criarJato() {
+        PrintEpsonJato impressaoEpsonJato = new PrintEpsonJato();
+        return impressaoEpsonJato;
     }
-    public void setEpsonJato(PrintEpsonJato epsonJato) {
-        this.epsonJato = epsonJato;
-    }       
 }

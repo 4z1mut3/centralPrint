@@ -7,18 +7,30 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author Paulo André
  */
-public class PrintEpsonJato extends  Jato{
+public class PrintEpsonJato implements Jato{
 
-    private String texto;
+    private String status;
     
-    public String getTexto() {
-        return texto;
+    public String getStatus() {
+        return status;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+   
+    @Override
+    public String impressaoHpJato() {
+       this.status = "Impressão realizada por impressora HP jato de tinta";
+       return this.status;
+    }
+
+    @Override
+    public String impressaoPrintEpsonJato() {
+       this.status = "Impressão realizada por impressora Epson jato de tinta";
+       return this.status;
     }
     
 }

@@ -7,27 +7,19 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author Paulo André
  */
-public class DriverHP extends Driver{
+public class DriverHP implements Driver{
 
-    private PrintHPJato hpJato;
-    private PrintHPLaser hpLaser;
-    
-    public PrintHPJato getHpJato() {
-        return hpJato;
+    @Override
+    public Laser criarLaser() {
+       PrintHPLaser hpLaser = new PrintHPLaser();
+       return hpLaser;
     }
 
-    public void setHpJato(PrintHPJato hpJato) {
-        this.hpJato = hpJato;
-    }
-
-    public PrintHPLaser getHpLaser() {
-        return hpLaser;
-    }
-
-    public void setHpLaser(PrintHPLaser hpLaser) {
-        this.hpLaser = hpLaser;
-    }
-    
+    @Override
+    public Jato criarJato() {
+        PrintHPJato hp_jato = new PrintHPJato();
+        return hp_jato;
+    }    
 }

@@ -7,17 +7,23 @@ package centralprint;
 
 /**
  *
- * @author Aluno
+ * @author Paulo André
  */
-public class PrintEpsonLaser extends Laser{
+public class PrintEpsonLaser  implements Laser{
     
     private String texto;
     
-    public String getTexto() {
-        return texto;
+    
+
+    @Override
+    public String impressaoLaserHP() {        
+        this.texto ="Impressora não encontrada";
+        return this.texto;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
+    @Override
+    public String impressaoLaserEpson() {
+        this.texto = " Impressão sendo realizada por Impressora Laser Epson";
+        return this.texto;
     }
 }

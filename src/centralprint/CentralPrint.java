@@ -4,49 +4,40 @@
  * and open the template in the editor.
  */
 package centralprint;
+
+import java.util.Scanner;
+
 /**
  *
- * @author Aluno
+ * @author Paulo André
  */
 public class CentralPrint {
     
-    private CentralPrint imprimir;
-    private String texto = "Imprimindo";
-    
-    
-    
-    
-    public String getTexto() {
-        return texto;
-    }
-
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
+    public static void main(String args[]){
         
-    public CentralPrint getImprimir() {
-        if(imprimir == null){
-            this.imprimir = new CentralPrint();            
+        Scanner sc = new Scanner(System.in);
+        
+        Driver driverEpson = new DriverEpson();
+        Driver driverHp = new DriverHP();
+        
+        System.out.println("Informe qual tipo de imprssão gostaria de realizar:: ");
+        
+        int opcao = sc.nextInt();
+        
+        if(opcao == 1){
+            driverEpson.criarJato();
+        }else{
+            if(opcao == 2){
+                driverEpson.criarLaser();
+                
+            }else{
+                if(opcao == 3){
+                    driverHp.criarJato();
+                }else{
+                    driverHp.criarLaser();
+                }
+                
+            }
         }
-        return this.imprimir;
     }
-
-    public void setImprimir(CentralPrint imprimir) {
-        this.imprimir = imprimir;
-    }
-    
-    
-    
-    
-  
-    
-    
-    
-
-
-    
-    
-    
-    
-    
 }
